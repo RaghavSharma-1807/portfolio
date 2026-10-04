@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canvas &amp; Ink</title>
+<meta name="description" content="Original paintings and ink drawings. Browse the work and get in touch to buy a piece.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#buy">Buy a painting</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <p class="mono">Original paintings and ink drawings</p>
+      <h1>Made by hand, <em>one canvas</em> at a time.</h1>
+      <p class="lede">Acrylic paintings of coastlines, birds and open roads, and black ink drawings packed with pattern. Every piece shown here is an original. If one speaks to you, send a message and it can be yours.</p>
+      <div class="cta">
+        <a class="btn solid" href="#work">See the work</a>
+        <a class="btn" href="#buy">Buy a painting</a>
+      </div>
+    </div>
+    <figure class="feature" id="feature"></figure>
+  </div>
+
+  <section id="work">
+    <div class="sec-head">
+      <div>
+        <p class="mono">Selected works, 7 pieces</p>
+        <h2>The work</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter by type" id="filters"></div>
+    </div>
+    <div class="hang" id="hang"></div>
+  </section>
+
+  <section id="about" class="about">
+    <p class="big">Saturated colour on canvas, <em>dense line</em> on paper.</p>
+    <div>
+      <p>I work in acrylic on canvas and in black ink on paper. The paintings lean toward strong colour: sea blues, sunset oranges, flamingo pink, peacock green. The drawings go the other way, built from pattern, fine line and shading.</p>
+      <p>Subjects come from places I have seen and things I like to look at for a long time: a house on a hillside, a car on a mountain road, a bird in the last light of the day.</p>
+      <dl class="facts">
+        <dt>Paintings</dt><dd>Acrylic on canvas, from miniature to wall size</dd>
+        <dt>Drawings</dt><dd>Ink and graphite on paper</dd>
+        <dt>Commissions</dt><dd>Ask in your message if you want something made for you</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="buy" class="buy">
+    <div>
+      <p class="mono">Buying a painting</p>
+      <h2>Interested in a piece?</h2>
+      <ol class="steps">
+        <li><div><b>Pick a piece.</b><p>Press Enquire under any work, or choose one from the list.</p></div></li>
+        <li><div><b>Send the message.</b><p>Add your name and city, then press a Send button. The message opens ready to go.</p></div></li>
+        <li><div><b>Agree on details.</b><p>You get the price, the size and the delivery options in reply.</p></div></li>
+      </ol>
+    </div>
+    <div class="form">
+      <label>
+        <span class="mono">Which piece</span>
+        <select id="piece"></select>
+      </label>
+      <label>
+        <span class="mono">Your message</span>
+        <textarea id="msg"></textarea>
+      </label>
+      <div class="send-wrap" id="sendWrap">
+        <p class="mono">Send it</p>
+        <div class="row" id="send"></div>
+      </div>
+      <div class="row">
+        <button class="btn" type="button" id="copyMsg">Copy message</button>
+        <p class="hint" id="copyHint">Fill in your name and city above, then send. You can also copy the message and paste it anywhere.</p>
+      </div>
+      <div class="contacts" id="contacts"></div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono" id="foot"></span>
+    <a class="mono" href="#top">Back to top</a>
+  </footer>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Artwork viewer" hidden>
+  <div class="lb-top">
+    <p class="mono" id="lbCount"></p>
+    <button class="btn small" type="button" id="lbClose">Close</button>
+  </div>
+  <div class="lb-stage"><img id="lbImg" alt=""></div>
+  <div class="lb-bot">
+    <div>
+      <p class="lb-title" id="lbTitle"></p>
+      <p class="lb-sub" id="lbSub"></p>
+    </div>
+    <div class="row">
+      <button class="btn small" type="button" id="lbPrev">Previous</button>
+      <button class="btn small" type="button" id="lbNext">Next</button>
+      <button class="btn small solid" type="button" id="lbEnq">Enquire</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
